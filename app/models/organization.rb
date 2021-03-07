@@ -6,7 +6,7 @@ class Organization < ApplicationRecord
     validates_presence_of :zip
     validates_presence_of :short_name 
     validates_uniqueness_of :short_name
-    validates_numericality_of: zip, with: /\A\d{5}\z/
+    validates_format_of :zip, with: /\A\d{5}\z/
     validates_inclusion_of :state, in: %w[Alabama Alaska Arizona Arkansas California
     Colorado 
     Connecticut 
@@ -53,7 +53,7 @@ class Organization < ApplicationRecord
     West Virginia 
     Wisconsin 
     Wyoming]
-    scope :alphabetical, -> { order('name') }
+    scope :alphabetical, -> { order('name')}
     scope :active,      -> {where(active: true)}
     scope :inactive,    -> {where(active: false)}
     
