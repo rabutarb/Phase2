@@ -9,7 +9,7 @@ class CreateOrganizations < ActiveRecord::Migration[5.2]
       t.string :state
       t.string :zip
       t.string :short_name
-      t.boolean :active
+      t.boolean :active, default: true
 
       t.timestamps
     end

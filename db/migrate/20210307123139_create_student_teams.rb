@@ -7,7 +7,7 @@ class CreateStudentTeams < ActiveRecord::Migration[5.2]
       t.date :start_date
       t.date :end_date
       t.integer :position
-      t.boolean :active
+      t.boolean :active, default: true
 
       t.timestamps
     end

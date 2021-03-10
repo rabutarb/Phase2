@@ -6,7 +6,7 @@ class CreateStudents < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.integer :grade
       t.references :organization_id, foreign_key: true
-      t.boolean :active
+      t.boolean :active, default: true
 
       t.timestamps
     end

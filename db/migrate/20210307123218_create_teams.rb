@@ -5,7 +5,7 @@ class CreateTeams < ActiveRecord::Migration[5.2]
       t.string :name
       t.references :organization_id, foreign_key: true
       t.string :division
-      t.boolean :active
+      t.boolean :active, default: true
 
       t.timestamps
     end
