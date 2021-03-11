@@ -1,0 +1,15 @@
+current directory: /Users/rahafkhaled/Desktop/check2/vendor/bundle/gems/debug_inspector-1.0.0/ext/debug_inspector
+/Users/rahafkhaled/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/rahafkhaled/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210311-94344-1xyklz1.rb extconf.rb
+creating Makefile
+
+current directory: /Users/rahafkhaled/Desktop/check2/vendor/bundle/gems/debug_inspector-1.0.0/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/rahafkhaled/Desktop/check2/vendor/bundle/gems/debug_inspector-1.0.0/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/rahafkhaled/Desktop/check2/vendor/bundle/gems/debug_inspector-1.0.0/ext/debug_inspector
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 debug_inspector.bundle ./.gem.20210311-94344-1ut8a2m
