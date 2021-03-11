@@ -8,7 +8,7 @@ class Team < ApplicationRecord
   validates_inclusion_of :division, in : %w['junior','senior']
 
 
-  scope :alphabetical, -> { order('team_id')}
+  scope :alphabetical, -> { order('name')}
   scope :active,      -> {where(active: true)}
   scope :inactive,    -> {where(active: false)}
   scope :juniors,    -> {where(division: "juniors")}

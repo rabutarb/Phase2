@@ -6,7 +6,7 @@ FactoryBot.define do
         city {"Doha"}
         state {"Pittsburgh"}
         zip {"15106"}
-        short_name {"CMU"}
+        short_name {"cmu"}
         active {true}
     end
 end
