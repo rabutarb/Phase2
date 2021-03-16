@@ -1,6 +1,7 @@
 class Team < ApplicationRecord
-  belongs_to :organization_id
+  belongs_to :organization
   has_many :students, through :student_teams
+  has_many :student_teams
 
   validates_presence_of :name
   validates_presence_of :division
@@ -16,7 +17,6 @@ class Team < ApplicationRecord
   scope :for_organization,    -> (organization) {where('organization = ?', organization)}
 
 
-  private
   def make_active
       self.update_attribute(:active, true)
   end

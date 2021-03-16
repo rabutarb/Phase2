@@ -57,7 +57,7 @@ class Organization < ApplicationRecord
     scope :active,      -> {where(active: true)}
     scope :inactive,    -> {where(active: false)}
     
-    private
+
     def make_active
         self.update_attribute(:active, true)
     end

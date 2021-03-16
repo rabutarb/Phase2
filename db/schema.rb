@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_07_123218) do
+ActiveRecord::Schema.define(version: 2021_03_11_105148) do
 
   create_table "organizations", force: :cascade do |t|
-    t.integer "organization_id"
     t.string "name"
     t.string "street_1"
     t.string "street_2"
@@ -27,7 +26,6 @@ ActiveRecord::Schema.define(version: 2021_03_07_123218) do
   end
 
   create_table "student_teams", force: :cascade do |t|
-    t.integer "studentTeams_id"
     t.integer "team_id_id"
     t.integer "student_id_id"
     t.date "start_date"
@@ -41,7 +39,6 @@ ActiveRecord::Schema.define(version: 2021_03_07_123218) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.integer "student_id"
     t.string "first_name"
     t.string "last_name"
     t.integer "grade"
@@ -53,7 +50,6 @@ ActiveRecord::Schema.define(version: 2021_03_07_123218) do
   end
 
   create_table "teams", force: :cascade do |t|
-    t.integer "team_id"
     t.string "name"
     t.integer "organization_id_id"
     t.string "division"

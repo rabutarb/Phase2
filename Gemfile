@@ -54,7 +54,7 @@ group :development, :test do
   gem 'hirb'
   gem 'faker'
   gem 'populator'
-  gem 'factory_bot_rails'
+  # gem 'factory_bot_rails'
 end
 
 group :development do
@@ -76,6 +76,7 @@ group :test do
   gem 'minitest-rails', '3.0.0'
   gem 'minitest-reporters', '1.1.19'
   gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'launchy'

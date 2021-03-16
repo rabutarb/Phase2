@@ -9,6 +9,8 @@ module Contexts
 
         def destroy_teams
             @teamc.destroy
+            @teamg.destroy
+            @teamn.destroy
         end
     end
 end

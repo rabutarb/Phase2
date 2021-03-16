@@ -8,6 +8,8 @@ module Contexts
 
         def destroy_organizations
             @cmu.destroy
+            @nuq.destroy
+            @guq.destroy
         end
     end
 end

@@ -17,13 +17,14 @@ class TeamTest < ActiveSupport::TestCase
   #matchers
   #relationships testing
   should have_many(:students).through(:student_teams)
+  should have_many(:student_teams)
   should belong_to(:organization_id)
 
   #validations testing
   should validate_presence_of(:name)
   should validate_presence_of(:division)
   should validate_presence_of(:organization_id)
-  should validate_inclusion_of(:division).in_array(['junior','senior')
+  should validate_inclusion_of(:division).in_array(['junior','senior'])
   
   should allow_value("junior").for(:division)
   should allow_value("senior").for(:division)
