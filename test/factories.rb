@@ -6,7 +6,7 @@ FactoryBot.define do
         street_1 {"QF"}
         street_2 {"EC"}
         city {"Doha"}
-        state {"Pittsburgh"}
+        state {"Pennsylvania"}
         zip {"15106"}
         short_name {"cmu"}
         active {true}
@@ -31,8 +31,8 @@ FactoryBot.define do
 
     # factory blueprint for student teams
     factory :student_teams do
-        start_date{16/03/2021}
-        end_date{16/05/2021}
+        start_date{3.days.ago.to_date}
+        end_date{nil}
         association :team
         association :student
         position {1}

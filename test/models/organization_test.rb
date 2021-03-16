@@ -4,7 +4,7 @@ SimpleCov.start 'rails'
 class OrganizationTest < ActiveSupport::TestCase
 
   #context
-  context "this context" do
+  context "create organizations" do
     setup do
       create_organizations
     end
@@ -74,7 +74,7 @@ class OrganizationTest < ActiveSupport::TestCase
   should validate_uniqueness_of(:short_name)
   # should validate_format_of(:zip).with(/\A\d{5}\z/)
 
-  should allow_value("Texas").for(:state)
+  should allow_value("Virginia").for(:state)
   should_not allow_value("Doha").for(:state)
 
   should_not allow_value(nil).for(:name)
@@ -86,12 +86,22 @@ class OrganizationTest < ActiveSupport::TestCase
 
   #testing scopes
   should "Show organizations in alphabetical order" do
-    assert_equal["cmu","guq","nuq"]= organization.alphabetical.map{|f| f.short_name}.sort
+    assert_equal["cmu","guq","nuq","wcq"]= organization.alphabetical.map{|f| f.short_name}.sort
   end
   should "Show that there are 2 active organizations" do
     assert_equal 2, organization.active.size
     assert_equal["cmu","guq"]= organization.alphabetical.map{|f| f.short_name}.sort
   end 
 
+
+  should "validating make_active" do
+    assert @nuq.make_active
+    assert_equal true, @nuq.active
+  end
+
+  should "validating make_inactive" do
+    assert @cmu.make_inactive
+    assert_equal false, @cmu.active
+  end
   
 end
