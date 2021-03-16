@@ -15,6 +15,8 @@ scope :active, -> {where(active: true)}
 scope :inactive, -> {where(active: false)}  
 scope :by_position, -> { order('position') }
 scope :chronological, -> { order('start_date') }
+scope :captains, -> {where(position: 1)}
+
 
 #methods
 def make_active

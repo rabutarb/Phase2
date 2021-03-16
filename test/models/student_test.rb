@@ -22,6 +22,7 @@ context "Creating students" do
   teardown do
     destroy_students
   end
+end
 
 #scopes
 # should "have a scope to alphabetize tasks" do

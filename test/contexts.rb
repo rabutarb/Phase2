@@ -1,13 +1,10 @@
 require './test/sets/organizations'
 require './test/sets/teams'
 module Contexts
-    include Context::Organizations
-    include Context::Teams
-    include Context::Students
-    include Context::Student_teams
+
 
     def create_organizations
-
+        @cmu = FactoryBot.create(:organization)
     end
 
     def destroy_organizations
